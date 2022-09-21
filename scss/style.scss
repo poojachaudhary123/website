@@ -1,0 +1,1602 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&family=Lora:ital,wght@0,500;0,600;0,700;1,700&display=swap');
+
+
+
+$brand: #DEA057;
+$black: #0A0F15;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+    font-family: 'Lora', serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #292b31;
+    font-style: normal;
+
+}
+.tarns{
+    transition: all 0.9s linear;
+}
+
+/*.container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+}*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+nav {
+    background: $black;
+    line-height: 29px;
+
+
+    ul {
+        font-family: 'Exo', sans-serif;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: 400;
+
+        .nav-item {
+            padding-left: 20px;
+
+            .icon-after {
+                &::after {
+                    content: "+";
+                    padding-left: 3px;
+                    font-size: 18px;
+                    position: absolute;
+                    bottom: 29px;
+                }
+            }
+
+            a {
+                color: #FFFFFF;
+
+                &:hover {
+                    color: $brand ;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+nav.navbar.navbar-expand-lg {
+    padding: 13px;
+
+}
+
+/* BUTTON START*/
+.nav-right-btn {
+    background: $brand;
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1;
+
+    a {
+        color: $black;
+        font-size: 16px;
+        font-family: Exo, sans-serif;
+        font-weight: 600;
+
+        i {
+            font-size: 30px;
+
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #202020;
+        z-index: -1;
+        transition: transform 300ms ease-in;
+        transform: scaleX(0);
+
+
+
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+
+    &:hover {
+        a {
+            color: white;
+
+        }
+    }
+}
+
+/* BUTTON END*/
+.banner {
+
+    overflow: hidden;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(32,32,32,0.5),rgba(32,32,32,0.5)),url("../img/banner1-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .banner-social-area{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    width: 80px;
+    z-index: 9999;
+
+      .banner-socila{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+        li{
+            background: white;
+            padding: 5px;
+            a{
+                color:black;
+            }
+        }
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 40px;
+        width: 1px;
+        height: 100%;
+        background-color: $brand;
+        z-index: 9999;
+        opacity: .3;
+    }
+      }
+      .banner-scroll-area{
+        position: absolute;  
+            right: 0;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            width: 80px;
+            z-index: 1;
+          a{
+            font-size: 16px;
+            font-weight: 600;
+            color: $brand;
+            display: block;
+            white-space: nowrap;
+            transform: rotate(90deg);
+            background:white;
+            padding: 5px 10px;
+          }
+          &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 40px;
+            width: 1px;
+            height: 100%;
+            background-color: $brand;
+            z-index: -1;
+            opacity: .3;
+        }
+          }
+          .banner-content{
+              padding: 120px 10px;
+              text-align: center;
+              span{
+                display: inline-block;
+                color: $brand;
+                font-size: 22px;
+                font-weight: 400;
+                font-family: var(--font-exo);
+                margin-bottom: 8px;
+              }
+              h1{
+                  font-size: 78px;
+                  line-height: 101px;
+                  font-weight: 600;
+                  color: white;
+                  margin-bottom: 45px;
+                  span{
+                    font-size: 78px;
+                    line-height: 101px;
+                    font-weight: 600;
+                    color: $brand;
+                    margin-bottom: 45px;
+                  }
+              }
+              .button-area{
+                  .nav-right-btn{
+                      display: inline-block;
+                  }
+                  .phone-call{
+                      margin-bottom: 30px;
+                     .icon{
+                     margin-left: 20px;
+                     margin-right: 10px;
+                         i{
+                             color: white;
+                             font-size: 40px;
+                         }
+                     } 
+                     .number{
+                         span{
+                             color: white;
+                             font-size: 16px;
+                         }
+                         h5{
+                             a{
+                                 color: white;
+                             }
+                         }
+                     }
+                  }
+              }
+          }
+      }
+
+  
+
+
+
+
+
+
+/* INTRO SECTION STRAT*/
+.intro-section {
+    background: #F7F7F7;
+
+
+    .intro-box {
+        position: relative;
+
+        /* &::after{
+             content: "";
+             position: absolute;
+             top: 0px;
+             left: 0px;
+             right: 0px;
+             bottom: 0px;
+             z-index: -1;
+             background: $black;
+             transform: scaleX(0);
+             transform-origin: left;
+         }*/
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 35%;
+            width: 1px;
+            height: 110px;
+            z-index: 0;
+            background-color: rgba(32, 32, 32, .1);
+        }
+
+
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            font-size: 60px;
+            font-weight: 700;
+            -webkit-text-stroke: 1px rgba(32, 32, 32, .1);
+            -webkit-text-fill-color: transparent;
+        }
+
+    }
+
+    .intor-sbox {
+
+        p {
+            font-family: 'Exo', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 29px;
+            color: #9b9b9b;
+
+        }
+
+    }
+}
+
+/* INTRO SECTION END*/
+
+/*ABOUT SECTION STRAT*/
+.about-section {
+    padding-top: 110px;
+    position: relative;
+
+    .row {
+        position: absolute;
+        top: 178px;
+        left: 78px;
+    }
+
+    .scetion-title {
+        h2 {
+            background: linear-gradient(-9deg, $brand, #202020);
+            color: $brand;
+            font-size: 40px;
+            text-transform: uppercase;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        p {
+            font-size: 16px;
+            font-family: 'Exo', sans-serif;
+            font-weight: 400;
+            line-height: 29px;
+            width: 93%;
+        }
+    }
+
+    .about-content {
+
+        h3 {
+            font-size: 30px;
+            line-height: 41px;
+            color: #292b31;
+            width: 89%;
+            padding: 38px 0px;
+        }
+    }
+
+    .lawyer-word {
+        border: 1px solid rgba(32, 32, 32, .07);
+        padding: 20px;
+        border-radius: 0;
+
+        background: white;
+
+        p {
+            font-size: 16px;
+            font-family: 'Exo', sans-serif;
+            font-weight: 400;
+            line-height: 29px;
+            width: 94%;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 400;
+            color: $brand;
+            padding-top: 14px;
+        }
+
+    }
+}
+
+.about1-right {
+    position: relative;
+
+    img {
+        border-radius: 240px;
+        margin-left: 90px;
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 59px;
+        top: 10px;
+        background: rgba(222, 160, 87, .2);
+        border-radius: 240px;
+        width: 100%;
+        max-width: 490px;
+        height: 100%;
+    }
+
+    .experience-tag {
+        width: 100%;
+        max-width: 170px;
+        text-align: center;
+        background: #292B30;
+        height: 100%;
+        max-height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -21px;
+        right: 80px;
+        border-radius: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            background: white;
+            border: 2px solid #292B30;
+            width: 106%;
+            max-width: 190px;
+            height: 106%;
+            max-height: 190px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        h2 {
+            color: $brand;
+            font-size: 50px;
+
+
+        }
+
+        span {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            font-style: normal;
+            font-family: Exo, sans-serif;
+
+
+        }
+
+        p {
+            font-size: 13px;
+            font-weight: 400;
+            color: white;
+            font-family: Exo, sans-serif;
+            ;
+        }
+
+        &::after {
+            content: "";
+            background: #fff;
+
+            width: 60px;
+            height: 100%;
+            max-height: 60px;
+            background-image: url("../img/home-icon.svg");
+            background-size: auto;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            background-position: center;
+            position: absolute;
+            top: -10px;
+            right: -11px;
+            box-shadow: 5px 0px 15px rgb(0, 0, 0/5%);
+        }
+
+    }
+
+}
+
+/*ABOUT SECTION ENd*/
+/* PARCTICE-AREA SECTION STRAT*/
+.practice-area-section {
+    padding-bottom: 75px;
+
+    h2 {
+        background: linear-gradient(-9deg, $brand, #202020);
+        color: $brand;
+        font-size: 40px;
+        text-transform: uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        width: 59%;
+        font-size: 16px;
+        font-family: Exo, sans-serif;
+        font-weight: 400;
+        line-height: 29px;
+        color: #333333;
+        padding-top: 16px;
+    }
+
+    .practice-box {
+        &:hover {
+            .head {
+                background: $brand;
+            }
+
+            .body {
+                background: $black;
+
+                p {
+                    color: white;
+                }
+
+            }
+
+            .head1 {
+                background: $black;
+
+                i {
+                    color: white;
+                }
+
+                a {
+                    color: white !important;
+
+
+                }
+
+                h4 {
+                    color: white;
+                }
+            }
+
+            .body1 {
+                background: $brand;
+
+                p {
+                    color: white;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .head {
+            background: rgba(219, 158, 85, .15);
+            padding-bottom: 20px;
+            border-radius: 20px 20px 0px 0px;
+
+            .icon {
+                padding: 20px 30px;
+                justify-content: space-between;
+
+                i {
+                    font-size: 40px;
+                }
+
+                a {
+                    border: 1px solid $brand ;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    color: $black;
+                }
+
+            }
+
+            h4 {
+                padding-left: 30px;
+                font-size: 24px;
+            }
+
+        }
+
+        .body {
+            background: rgba(32, 32, 32, .15);
+            padding-bottom: 30px;
+            border-radius: 0px 0px 20px 20px;
+
+            p {
+                font-size: 16px;
+                color: $black;
+                padding-left: 30px;
+                width: 80%;
+            }
+
+            a {
+                padding-left: 30px;
+                position: relative;
+                color: $brand;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 30px;
+                    top: 24px;
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 4px;
+                    background: $brand;
+                    z-index: 9999;
+
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 30px;
+                    top: 25px;
+                    width: 73px;
+                    height: 1px;
+                    border-radius: 4px;
+                    background: $black;
+
+
+                }
+
+            }
+
+
+        }
+
+        .head1 {
+            background: rgba(32, 32, 32, .15);
+            padding-bottom: 20px;
+            border-radius: 20px 20px 0px 0px;
+
+            .icon {
+                padding: 20px 30px;
+                justify-content: space-between;
+
+                i {
+                    font-size: 40px;
+                }
+
+                a {
+                    border: 1px solid $brand ;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    color: $black;
+                }
+
+            }
+
+            h4 {
+                padding-left: 30px;
+                font-size: 24px;
+            }
+        }
+
+        .body1 {
+            background: rgba(219, 158, 85, .15);
+            padding-bottom: 30px;
+            border-radius: 0px 0px 20px 20px;
+
+            p {
+                font-size: 16px;
+                color: $black;
+                padding-left: 30px;
+                width: 80%;
+            }
+
+            a {
+                padding-left: 30px;
+                position: relative;
+                color: $brand;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 30px;
+                    top: 24px;
+                    width: 40px;
+                    height: 3px;
+                    border-radius: 4px;
+                    background: $brand;
+                    z-index: 9999;
+
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 30px;
+                    top: 25px;
+                    width: 73px;
+                    height: 1px;
+                    border-radius: 4px;
+                    background: $black;
+
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+/* PARCTICE-AREA SECTION ENd*/
+
+/* INFORMATION SECTION STRAR*/
+.info-section {
+    background: linear-gradient(rgba(41, 43, 49, 0.9), rgba(41, 43, 49, 0.9)), url(../img/info-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 90px 10% 90px 12%;
+
+
+    .progress-area {
+        .progress-box {
+            background: white;
+            padding: 30px;
+            width: 80%;
+            height: 32vh;
+            padding-top: 60px;
+            border-radius: 10px;
+
+            h4 {
+                font-size: 35px;
+                padding-top: 10px;
+            }
+        }
+
+    }
+
+    .info-content {
+        color: white;
+
+        h2 {
+            color: white;
+            font-size: 45px;
+            line-height: 63px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 29px;
+            padding-top: 30px;
+        }
+
+        .info-list {
+            padding-left: 0px;
+
+            li {
+                padding-right: 80px;
+
+                h4 {
+                    color: $brand;
+                    font-size: 24px;
+                    font-weight: 500;
+                    padding-top: 35px;
+                }
+
+                p {
+                    padding-top: 0px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: Exo, sans-serif;
+
+                }
+            }
+
+        }
+    }
+
+    .video-box {
+        position: relative;
+        margin-top: 150px;
+        margin-left: 50px;
+
+        .video-icon {
+
+            color: white;
+            width: 100px;
+            height: 100px;
+            font-size: 40px;
+            border-radius: 50%;
+            position: absolute;
+            padding: 20px;
+            text-align: center;
+
+            i {
+
+                color: white;
+
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+
+                background: rgba(255, 255, 255, .1);
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                border-radius: 50%;
+                animation: animate 2s infinite ease-in-out;
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: rgba(255, 255, 155, .1);
+                top: 0px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                border-radius: 50%;
+                animation: animated 2s infinite ease-in-out;
+                animation-duration: .5s;
+
+
+
+
+            }
+
+
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+@keyframes animated {
+    0% {
+        transform: scale(.9);
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+/* INFORMATION SECTION END*/
+/* CASE STUDY SECTION STRAR*/
+
+.casestudy-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: 120px;
+
+    .section-img-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .section-img-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .section-litle {
+        h2 {
+            background: linear-gradient(-9deg, $brand, #202020);
+            color: $brand;
+            font-size: 40px;
+            text-transform: uppercase;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: Exo, sans-serif;
+            font-weight: 400;
+            line-height: 29px;
+
+        }
+    }
+
+    .nav-right-btn {
+        float: right;
+    }
+
+    .casestudy-box {
+        position: relative;
+
+        .casestudy1 {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+
+            span {
+                color: $brand;
+                font-size: 18px;
+                font-family: Exo, sans-serif;
+                font-weight: 500;
+                line-height: 27px;
+                position: relative;
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 25px;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 10px;
+                    background: $brand;
+                }
+
+            }
+
+            h3 {
+                padding-top: 8px;
+                font-size: 30px;
+
+                a {
+                    color: white;
+
+                }
+            }
+        }
+    }
+}
+
+/* CASE STUDY SECTION END*/
+/* Attorneys  SECTION STRAR*/
+
+
+.attorneys-section {
+    padding-top: 100px;
+
+
+    h2 {
+        background: linear-gradient(-9deg, $brand, #202020);
+        color: $brand;
+        font-size: 40px;
+        text-transform: uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        width: 59%;
+        font-size: 16px;
+        font-family: Exo, sans-serif;
+        font-weight: 400;
+        line-height: 29px;
+        color: #333333;
+        padding-top: 16px;
+    }
+
+    .item {
+        img {
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+
+            h4 {
+                a {
+                    color: white;
+                    display: block;
+                }
+
+                &::after {
+                    content: "";
+                    width: 60px;
+                    height: 2px;
+                    border-radius: 5px;
+                    background: $brand;
+                    position: absolute;
+                    left: 25%;
+                    transform: translateX(-50%);
+                    bottom: 73px;
+                }
+            }
+        }
+
+        p {
+            display: inline-block;
+            padding-top: 0px;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        .solial-list,
+        ul {
+            padding-left: 0px;
+            background: $brand;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 5px 5px 0px 0px;
+
+
+        }
+    }
+}
+
+
+
+/* Attorneys  SECTION END*/
+/* CONTACT  SECTION STRAR*/
+
+
+.contact-section {
+    .left-content {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .contact-title {
+            padding-left: 100px;
+            padding-top: 45px;
+
+            h2 {
+                background: linear-gradient(-9deg, $brand, #202020);
+                color: $brand;
+                font-size: 40px;
+                text-transform: uppercase;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+
+                font-size: 16px;
+                font-family: Exo, sans-serif;
+                font-weight: 400;
+                line-height: 29px;
+                color: #333333;
+                padding-top: 16px;
+                width: 88%;
+            }
+        }
+
+        .contact-form {
+            padding-left: 100px;
+            padding-right: 50px;
+
+            .inner-form {
+                padding: 20px 0px;
+
+                input {
+                    padding: 14px 30px;
+                    border: 0px;
+                }
+
+                select {
+                    padding: 14px 60px;
+                    border: 0;
+
+                }
+
+                textarea {
+                    width: 95%;
+                    padding: 14px 30px;
+                    border: 0px;
+                }
+            }
+        }
+    }
+
+    .right-content {
+        padding-left: 0px;
+        padding-right: 12px;
+
+        .address-list {
+
+            .icon {
+                border: 1px solid rgba(32, 32, 32, .3);
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                text-align: center;
+            
+
+                &:hover {
+                    background: $black;
+                }
+
+                i {
+                    font-size: 40px;
+                    color: $brand;
+                    padding-top: 17px;
+                }
+            }
+
+            .text {
+                margin-left: 30px;
+
+                h4 {
+                    color: $brand;
+                    font-size: 26px;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: Exo, sans-serif;
+                    width: 57%;
+                }
+                a{
+                    color:$black;
+                }
+            }
+        }
+
+        .contact-image-area {
+            background: linear-gradient(rgba(41, 43, 49, 0.85), rgba(41, 43, 49, 0.85)), url(../img/contact-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 490px;
+
+            margin-top: 50px;
+
+            img {
+                position: absolute;
+                top: -220px;
+                right: 6px;
+            }
+        }
+    }
+}
+
+/* CONTACT  SECTION END*/
+
+/*TESTIMONIAL SECTION START*/
+.testimonial-section {
+    padding-top: 120px;
+
+    h2 {
+        background: linear-gradient(-9deg, $brand, #202020);
+        color: $brand;
+        font-size: 40px;
+        text-transform: uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        width: 59%;
+        font-size: 16px;
+        font-family: Exo, sans-serif;
+        font-weight: 400;
+        line-height: 29px;
+        color: #333333;
+        padding-top: 16px;
+    }
+
+    .test {
+
+        margin-top: 30px;
+
+        .image {
+            position: relative;
+
+            .img-content {
+                position: absolute;
+                bottom: 30px;
+                left: 40px;
+
+                h3 {
+                    color: white;
+                    font-size: 26px;
+                }
+
+                span {
+                    color: $brand;
+                }
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50px;
+            left: 320px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0px 1px 5px;
+            border-radius: 10px;
+
+            img {
+                display: block;
+
+            }
+
+            P {
+                width: 100%;
+                font-size: 19px;
+                font-weight: 400;
+                font-family: Exo, sans-serif;
+                line-height: 37px;
+            }
+
+            span {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: rgba(215, 182, 121, .13);
+                font-family: 'Lora', serif;
+                display: inline-block;
+                width: 100%;
+                text-align: right;
+                line-height: 1;
+            }
+        }
+
+
+
+    }
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+.owl-nav {
+position: absolute;
+bottom: 125px;
+left: 400px;
+font-size: 40px;
+
+
+
+
+}
+
+
+
+/*TESTIMONIAL SECTION END*/
+/*LATEST NEWS SECTION START*/
+
+.latest-news-section {
+    padding-top: 120px;
+
+    h2 {
+        background: linear-gradient(-9deg, $brand, #202020);
+        color: $brand;
+        font-size: 40px;
+        text-transform: uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        width: 59%;
+        font-size: 16px;
+        font-family: Exo, sans-serif;
+        font-weight: 400;
+        line-height: 29px;
+        color: #333333;
+        padding-top: 16px;
+    }
+
+    .latest-news-slider {
+        .news-box {
+            position: relative;
+
+            h5 {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                background: $brand;
+                padding: 5px 12px;
+                border-radius: 4px;
+
+                a {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $black;
+                }
+
+                &:hover {
+                    background: $black;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+            }
+
+            .text {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+
+                .date {
+                    color: $brand;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: Exo, sans-serif;
+                    margin-bottom: 10px;
+                }
+
+                h4 {
+                    padding-right: 10px;
+                    position: relative;
+
+                    a {
+                        color: white;
+                    }
+
+                }
+            }
+
+
+
+        }
+
+
+    }
+}
+
+/*LATEST NEWS SECTION END*/
+/* FOOTER SECTION STRART*/
+.footer-section {
+    background-image: linear-gradient(rgba(41, 43, 49, 0.6), rgba(41, 43, 49, 0.6)), url(../img/footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #292b31;
+        z-index: -2;
+    }
+
+    .footer-top {
+        padding: 90px 0px;
+
+        .about-footer {
+
+            img {
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                font-family: Exo, sans-serif;
+                line-height: 25px;
+                color: white;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                padding-left: 0px;
+                margin-bottom: 50px;
+
+                li {
+                    a {
+                        color: white;
+                        background: $black;
+                        padding: 10px;
+                        border-radius: 10px;
+
+                        i {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .open-hours {
+                h6 {
+                    color: $brand;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .footer-item {
+
+            h4 {
+                color: $brand;
+            }
+
+            .link-list {
+
+                li {
+                    padding: 10px 0px;
+
+                    a {
+                        color: white;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .contact-list {
+                padding-left: 0px;
+
+                li {
+                    display: flex;
+                    padding-top: 25px;
+                    margin-left: 0px;
+
+                    .icon {
+                        i {
+                            font-size: 40px;
+                            color: $brand;
+                        }
+
+                    }
+
+                    .icon-email {
+                        font-size: 30px;
+                        color: $brand;
+                    }
+
+                    .text {
+                        a {
+                            color: white;
+                            display: block;
+                            margin-bottom: 8px;
+                            padding-left: 10px;
+                        }
+
+                    }
+                }
+            }
+
+            .recent-caselist {
+                margin-top: 25px;
+                padding-left: 0px;
+
+                li {
+                    padding-top: 20px;
+
+                    .text {
+                        padding-left: 20px;
+
+                        span {
+                            color: $brand;
+
+                        }
+
+                        a {
+                            color: white;
+                            font-size: 20px;
+                            font-weight: 500;
+                            font-family: Lora, serif;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        padding: 16px 0px;
+
+        p {
+            color: white;
+            font-size: 13px;
+            margin-bottom: 0px;
+
+            a {
+                color: $brand;
+            }
+        }
+
+        ul {
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: end;
+
+            .arrow-after {
+                padding-left: 20px;
+                position: relative;
+
+                a {
+                    color: white;
+                    font-size: 13px;
+
+                    &:first-child {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: -10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 2px;
+                            height: 15px;
+                            background: white
+                        }
+                    }
+                }
+            }
+
+            .arrow-befor {
+                a {
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* FOOTER SECTION END*/
